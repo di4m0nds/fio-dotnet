@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - fio_dotnet</title>
+    <!-- Using tailwind css -->
+    <!-- <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/fio_dotnet.styles.css" asp-append-version="true" />
+    <!-- https://github.com/angeldev96/tailwind-aspdotnet -->
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="mx-auto max-w-2xl px-5 sm:px-0">
+        <nav class="w-full flex sm:flex-row flex-col gap-5 mt-5 justify-between">
+            <a class="font-bold text-xl" asp-area="" asp-controller="Home" asp-action="Index">fio_dotnet</a>
+
+            <div class="px-5 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
+                <ul class="flex sm:flex-row flex-col justify-end gap-x-5 py-2 sm:py-0">
+                    <li>
+                        <a class="no-underline hover:underline" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li>
+                        <a class="no-underline hover:underline" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mx-auto max-w-2xl my-10 px-5 sm:px-0">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="mx-auto max-w-2xl text-center px-5 sm:px-0">
+        <div class="w-full h-1 bg-gray rounded-full my-5" />
+        <p>
+            &copy; 2024 - fio_dotnet - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </p>
+    </footer>
+
+    <!-- Using tailwind css -->
+    <!-- <script src="~/lib/jquery/dist/jquery.min.js"></script> -->
+    <!-- <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
