@@ -24,7 +24,7 @@ npx tailwindcss init -p
 npm run build:css
 ```
 
-8. Run the ASP.NET Core MVC project
+### Run the ASP.NET Core MVC project
 ```bash
 dotnet run
 ```
